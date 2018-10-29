@@ -1,2 +1,2 @@
 # lich-king
-Playground project consuming Hearthstone API
+Playground project consuming Battle.net game API

@@ -1,0 +1,31 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+
+# npm
+node_modules
+*.log
+*.gz
+
+# yarn
+yarn-error.log
+
+# IDEs && Misc.
+.vscode
+/.idea
+.idea
+/.idea_modules
+*.iml
+*.tgz
+.env

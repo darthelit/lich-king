@@ -1,0 +1,80 @@
+{
+  "name": "lich-king",
+  "version": "0.0.1",
+  "description": "Playground project consuming BNet API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyndi25/lich-king.git"
+  },
+  "keywords": [
+    "node",
+    "bnet",
+    "react",
+    "flux"
+  ],
+  "author": "Daniel Vincent <dvincent25@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyndi25/lich-king/issues"
+  },
+  "homepage": "https://github.com/Tyndi25/lich-king#readme",
+  "dependencies": {
+    "axios": "~0.18.0",
+    "cookie-parser": "~1.4.3",
+    "express": "^4.16.4",
+    "express-session": "~1.15.6",
+    "flux": "^3.1.3",
+    "immutable": "^3.8.2",
+    "passport": "~0.4.0",
+    "passport-bnet": "~2.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "~3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "jsdom": "^12.2.0",
+    "json-loader": "^0.5.7",
+    "lint-staged": "~7.3.0",
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.8.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.22.0",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}

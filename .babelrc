@@ -1,0 +1,28 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7",
+            "ie > 10"
+          ]
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  },
+  "plugins": [
+    "autobind-class-methods",
+    "transform-class-properties",
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}
