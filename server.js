@@ -26,14 +26,12 @@ passport.use(
     {
       clientID: BNET_ID,
       clientSecret: BNET_SECRET,
-      scope: 'wow.profile sc2.profile',
-      callbackURL: `https://localhost${base_url}/auth/bnet/callback`,
+      scope: 'wow.profile',
+      callbackURL: `https://7d94aa85.ngrok.io${base_url}/auth/bnet/callback`,
       region: 'us'
     },
     function(accessToken, refreshToken, profile, done) {
-      process.nextTick(function() {
-        return done(null, profile);
-      });
+      return done(null, profile);
     }
   )
 );
@@ -72,6 +70,7 @@ app.get(`${base_url}/`, function(req, res) {
       output += req.user.battletag + '<br>';
     }
     output += '<a href="/logout">Logout</a>';
+
     res.send(output);
   } else {
     res.send(
