@@ -4,6 +4,7 @@ var util = require('util');
 
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+let cors = require('cors');
 
 var BnetStrategy = require('passport-bnet').Strategy;
 
@@ -27,7 +28,7 @@ passport.use(
       clientID: BNET_ID,
       clientSecret: BNET_SECRET,
       scope: 'wow.profile',
-      callbackURL: `https://7d94aa85.ngrok.io${base_url}/auth/bnet/callback`,
+      callbackURL: `https://2194d9d9.ngrok.io${base_url}/auth/bnet/callback`,
       region: 'us'
     },
     function(accessToken, refreshToken, profile, done) {
@@ -37,6 +38,7 @@ passport.use(
 );
 
 var app = express();
+app.use(cors());
 
 // configure Express
 app.use(cookieParser());
@@ -85,7 +87,7 @@ app.get(`${base_url}/logout`, function(req, res) {
   res.redirect(`${base_url}/`);
 });
 
-const defaultPort = parseInt(process.env.PORT || 8443, 10);
+const defaultPort = parseInt(process.env.PORT || 8000, 10);
 
 exports.start = function(port) {
   if (port == null) {
